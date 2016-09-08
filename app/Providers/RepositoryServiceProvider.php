@@ -2,7 +2,7 @@
 
 namespace CodeDelivery\Providers;
 
-use CodeDelivery\Repositories\CategoryRepository;
+//use CodeDelivery\Repositories\CategoryRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -49,6 +49,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'CodeDelivery\Repositories\OrderRepositoryEloquent'
         );
 
+        $this->app->bind(
+            'CodeDelivery\Repositories\CupomRepository',
+            'CodeDelivery\Repositories\CupomRepositoryEloquent'
+        );
 
     }
 }
